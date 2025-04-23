@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Study Materials</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+   <div id="headline">
+    <h1 id="title">Study Materials</h1>
+   </div> 
+     <nav>
+      <a href="index.html">Back to Home</a>
+    </nav>
+    <button id="theme-toggle">🌙</button>
+   
+  </header>
+
+  <main>
+    <div class="subject-links">
+      <button onclick="loadPDF('pdfs/C.pdf')">C Programming</button>
+      <button onclick="loadPDF('pdfs/cpp.pdf')">C++ Programming</button>
+      <button onclick="loadPDF('pdfs/Java.pdf')">Java Programming</button>
+      <button onclick="loadPDF('pdfs/Csharp.pdf')">C# and .net</button>
+      <button onclick="loadPDF('pdfs/dbms.pdf')">DBMS</button>
+      <button onclick="loadPDF('pdfs/datamining.pdf')">Data Mining</button>
+      <button onclick="loadPDF('pdfs/webdesign.pdf')">Web Design</button>
+      
+    </div>
+
+    <iframe id="pdf-frame" src="" frameborder="0"></iframe>
+  </main>
+
+  <footer>
+    <section id="contact">
+      <h3>Contact Us</h3>
+      <form id="contact-form">
+        <label for="email">Your Email:</label><br />
+        <input type="email" id="email" name="email" required placeholder="Enter your email"><br /><br />
+        
+        <label for="message">Your Message:</label><br />
+        <textarea id="message" name="message" rows="5" required placeholder="Describe your query..."></textarea><br /><br />
+  
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  
+    <p>&copy; 2025 College Notes Hub</p>
+  </footer>
+  
+
+  <script src="script.js"></script>
+  <script>
+    function loadPDF(pdfPath) {
+      document.getElementById("pdf-frame").src = pdfPath;
+    }
+    
+      function loadPDF(pdfPath) {
+        document.getElementById("pdf-frame").src = pdfPath;
+      }
+    
+      // Load PDF from URL if available
+      window.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const pdf = urlParams.get("pdf");
+        if (pdf) {
+          loadPDF(pdf);
+        }
+      });
+    
+  </script>
+</body>
+</html>
