@@ -1,0 +1,30 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "my college project backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnkitVishwakarma25/College_notes_hub.git"
+  },
+  "keywords": [
+    "notes",
+    "college_project"
+  ],
+  "author": "ankit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnkitVishwakarma25/College_notes_hub/issues"
+  },
+  "homepage": "https://github.com/AnkitVishwakarma25/College_notes_hub#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.1"
+  }
+}
